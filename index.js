@@ -11,3 +11,7 @@ console.log(counter);
 const pi = Math.PI
 console.log(pi);
 
+// Task 1.4
+let userAge;
+userAge=40;
+console.log(userAge);
