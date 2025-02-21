@@ -7,5 +7,7 @@ console.log(userName);
 let counter = 0;
 console.log(counter);
 
-
+// Task 1.3
+const pi = Math.PI
+console.log(pi);
 
