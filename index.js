@@ -15,3 +15,7 @@ console.log(pi);
 let userAge;
 userAge=40;
 console.log(userAge);
+
+// Task 1.5
+const colours=["white", "Black", "Green"]
+console.log(colours)
