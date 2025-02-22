@@ -17,8 +17,8 @@ userAge=40;
 console.log(userAge);
 
 // Task 1.5
-const colours=["white", "Black", "Green"]
-console.log(colours)
+const colours=["white", "Black", "Green"];
+console.log(typeof colours)
 
 // Task 2.1
 let num = 5;
