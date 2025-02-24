@@ -16,6 +16,8 @@ userAge=40;
 console.log(userAge);
 
 // Task 1.5
+// -> I assume you were confused because of the word "list." I didn't mean to create an array (List in Java) here.
+// -> You just needed to declare a few variables like: const red = "#FF0000";
 const colours=["white", "Black", "Green"];
 console.log(typeof colours)
 
@@ -91,3 +93,5 @@ console.log(Boolean(spaceString));
 // Convert the following null value to a string and log the result:
 const emptyValue = null;
 console.log(String(emptyValue));
+
+// Good job!!!
