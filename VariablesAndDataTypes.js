@@ -47,3 +47,47 @@ console.log(typeof sym);
 let bigIntValue = 1234567890123456789012345678901234567890n; 
 console.log(typeof bigIntValue); 
 
+// Task 3.1
+// Convert the following boolean to a string and log the result:
+const isActive = true;
+console.log(String(isActive));
+
+// Task 3.2
+// Convert the following string to a number and log the result:
+const price = "49.99";
+console.log(Number(price)); 
+
+// Task 3.3 
+// Convert the following boolean to a number and log the result:
+const hasAccess = false;
+console.log(Number(hasAccess)); 
+
+// Task 3.4
+// Convert the following empty string to a number and log the result:
+const emptyText = "";
+console.log(Number(emptyText)); 
+
+// Task 3.5
+// Convert the following string to a boolean and log the result:
+const username = "JohnDoe";
+console.log(Boolean(username)); 
+
+// Task 3.6
+// Convert the following number to a boolean and log the result:
+const itemCount = 0;
+console.log(Boolean(itemCount)); 
+
+// Task 3.7
+// Convert the following undefined value to a number and log the result:
+const notDefined = undefined;
+console.log(Number(notDefined)); 
+
+// Task 3.8
+// Convert the following string containing spaces to a boolean and log the result:
+const spaceString = "   ";
+console.log(Boolean(spaceString)); 
+
+// Task 3.9
+// Convert the following null value to a string and log the result:
+const emptyValue = null;
+console.log(String(emptyValue));
