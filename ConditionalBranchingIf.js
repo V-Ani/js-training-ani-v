@@ -27,3 +27,14 @@ if (score >= 90 && score <= 100) {
 } else {
     console.log("Invalid Score. Please enter a number between 0 and 100.");
 } 
+
+// Task3
+// Weekend Checker
+let day = 'saturday';
+if (day === "saturday" || day === "sunday") {
+    console.log("It's the weekend!");
+} else if (day === "monday" || day === "tuesday" || day === "wednesday" || day === "thursday" || day === "friday") {
+    console.log("It's a weekday.");
+} else {
+    console.log("Invalid input. Please enter a valid day of the week.");
+}
