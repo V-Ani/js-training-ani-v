@@ -12,7 +12,7 @@
 // } else {
     // console.log("Fail");
 //} 
-
+// Task 2.2
 // ternary operator usage
 // let examScore = 49;
 // let examScoreDeepCheck = examScore > 0 && examScore < 50 ? 'Fail' :  examScore < 0 || examScore > 100 ? 'invalid' : 'Pass';
@@ -23,11 +23,18 @@
 // Write a program that checks if a number is even or odd.
 // Using the conditional branching if
 // let number = 1;
-// if (number % 2 == 0) {  // 
+// if (number % 2 == 0) {   
     // console.log("Even number");
 // } else {
     // console.log("Odd number");
 // } 
 
+// Task 1.1
+// ternary operator usage
+let number = 8;
+
+number % 2 == 0 
+  ? console.log("Even number") 
+  : console.log("Odd number");
 
 
