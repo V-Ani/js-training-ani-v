@@ -38,3 +38,17 @@ if (day === "saturday" || day === "sunday") {
 } else {
     console.log("Invalid input. Please enter a valid day of the week.");
 }
+//Task4
+// Game Score Adjuster
+let score1 = 10;
+let answer = true;
+if (answer === true) {
+    score1 ++ ;
+} else {
+    score1 -- ;
+}
+if (score1 === 0) {
+    console.log("Game Over");
+} else {
+    console.log(`Updated Score: ${score1}`);
+}
