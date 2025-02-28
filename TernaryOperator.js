@@ -12,3 +12,9 @@ if (score < 0 || score > 100) {
 } else {
     console.log("Fail");
 } 
+
+// Using conditional operator for checking the score
+// ternary operator usage
+let examScore = 49;
+let examScoreDeepCheck = examScore > 0 && examScore < 50 ? 'Fail' :  examScore < 0 || examScore > 100 ? 'invalid' : 'Pass';
+console.log(examScoreDeepCheck);
