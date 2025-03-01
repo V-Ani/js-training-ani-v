@@ -27,6 +27,7 @@
     // console.log("Invalid month! Please enter a valid month name.");
 //   } 
 
+// Task 3: Determine the Age Group
 let age = 126; 
 switch (true) {
   case age <0:
