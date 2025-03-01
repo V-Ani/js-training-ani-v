@@ -1,24 +1,28 @@
-let monthName = "March"; 
-switch (month) {
+// Task 2: Season Finder
+
+// 1. Request the user to enter a month name (e.g., January, February).
+let monthName = "March"
+switch (monthName) {
   case "December":
   case "January":
   case "February":
-    console.log(`${month} Winter`);
-    Break;
+    console.log(`${monthName} - Winter`);
+    break;
   case "March":
   case "April":
   case "May":
-    console.log(`${month} Spring`);
-    Break;
+    console.log(`${monthName} - Spring`);
+    break;
   case "June":
   case "July":
   case "August":
-    console.log(`${month} Summer`);
-    Break;
-case "September":
+    console.log(`${monthName} - Summer`);
+    break;
+  case "September":
   case "October":
   case "November":
-    console.log(`${month} Autumn`);
-    Break;
- default:
-    console.log("Invalid month! Please enter a valid month name."); 
+    console.log(`${monthName} - Autumn`);
+    break;
+  default:
+    console.log("Invalid month! Please enter a valid month name.");
+}
