@@ -43,3 +43,5 @@ console.log(myInput);
         default:
           dayName = "Invalid day number. Please enter a number between 1 and 7.";
       }
+
+
