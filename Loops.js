@@ -38,11 +38,26 @@
 // Print the result in the format: 5 x 1 = 5.
 // Choose a number (e.g., 5)
 
-let number = 5;
-for (let i = 1; i <= 10; i++) {
-    console.log(`${number} x ${i} = ${number * i}`);
-}
+// let number = 5;
+// for (let i = 1; i <= 10; i++) {
+    // console.log(`${number} x ${i} = ${number * i}`);
+// }
 
+// 4. Break Statement Task – Find the First Multiple of 7
+// Requirements:
+
+// Use a for loop to check numbers from 1 to 50.
+// Find the first number that is a multiple of 7.
+// Print the number and exit the loop using break.
+
+// 4. Break Statement Task – Find the First Multiple of 7
+
+for (let i = 1; i <= 50; i++) {
+if (i % 7 === 0) {
+console.log(i);
+break;
+  }
+}
 
 
 
