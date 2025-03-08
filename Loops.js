@@ -66,8 +66,6 @@
 // If a number is a multiple of 3, skip it using continue.
 // Print the rest of the numbers normally.
 
-// 5. Continue Statement Task – Skip Multiples of 3
-
 for (let i = 1; i <= 20; i++) {
 if (i % 3 === 0) {
 continue;
