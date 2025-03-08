@@ -50,12 +50,12 @@
 // Find the first number that is a multiple of 7.
 // Print the number and exit the loop using break.
 
-for (let i = 1; i <= 50; i++) {
-if (i % 7 === 0) {
-console.log(i);
-break;
-}
-}
+// for (let i = 1; i <= 50; i++) {
+// if (i % 7 === 0) {
+// console.log(i);
+// break;
+// }
+// }
 
 // 5. Continue Statement Task – Skip Multiples of 3
 // Requirements:
@@ -71,4 +71,22 @@ break;
 // console.log(i);
 // }
 
+// 6. Nested Loop Task – Print a Square of Stars
+// Requirements:
+
+// Use nested for loops to print a square pattern of stars (*).
+// The square should have a size of 4x4 (4 rows and 4 columns).
+// Your output should be:
+//   * * * *
+//   * * * *
+//   * * * *
+//   * * * *
+
+for (let i = 0; i < 4; i++) {
+  let row = '';
+  for (let j = 0; j < 4; j++) {
+      row += '* ';  
+  }
+  console.log(row);  
+}
 
