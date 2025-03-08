@@ -52,12 +52,27 @@
 
 // 4. Break Statement Task – Find the First Multiple of 7
 
-for (let i = 1; i <= 50; i++) {
-if (i % 7 === 0) {
-console.log(i);
-break;
-  }
-}
+// for (let i = 1; i <= 50; i++) {
+// if (i % 7 === 0) {
+// console.log(i);
+// break;
+  // }
+// }
 
+// 5. Continue Statement Task – Skip Multiples of 3
+// Requirements:
+
+// Use a for loop to print numbers from 1 to 20.
+// If a number is a multiple of 3, skip it using continue.
+// Print the rest of the numbers normally.
+
+// 5. Continue Statement Task – Skip Multiples of 3
+
+for (let i = 1; i <= 20; i++) {
+if (i % 3 === 0) {
+continue;
+}
+  console.log(i);
+}
 
 
