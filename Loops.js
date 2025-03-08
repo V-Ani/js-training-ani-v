@@ -20,15 +20,28 @@
 // Print each entered number.
 // After exiting, print a message indicating the loop has ended.
 
-let number;
-let counter = 10; 
-do {
-  number = counter;
-  console.log("You entered: " + number);
-  counter--;
-} while (number >= 0); 
+// let number;
+// let counter = 10; 
+// do {
+  // number = counter;
+  // console.log("You entered: " + number);
+  // counter--;
+// } while (number >= 0); 
 
-console.log("Loop has ended. You entered a negative number.");
+// console.log("Loop has ended. You entered a negative number.");
+
+// 3. For Loop Task – Multiplication Table
+// Requirements:
+
+// Choose a number (e.g., 5).
+// Use a for loop to print the multiplication table from 1 to 10.
+// Print the result in the format: 5 x 1 = 5.
+// Choose a number (e.g., 5)
+
+let number = 5;
+for (let i = 1; i <= 10; i++) {
+    console.log(`${number} x ${i} = ${number * i}`);
+}
 
 
 
