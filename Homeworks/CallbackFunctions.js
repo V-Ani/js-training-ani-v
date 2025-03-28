@@ -48,24 +48,24 @@
 // After the calculation, call the callback function with the result.
 
 // Function to sum numbers from 1 to n and call the callback with the result
-function sumNumbersUpTo(n, callback) {
-    let sum = 0;
+// function sumNumbersUpTo(n, callback) {
+//     let sum = 0;
     
-    // Loop through numbers from 1 to n and sum them up
-    for (let i = 1; i <= n; i++) {
-      sum += i;
-    }
+//     // Loop through numbers from 1 to n and sum them up
+//     for (let i = 1; i <= n; i++) {
+//       sum += i;
+//     }
   
-    // Call the callback function with the result
-    callback(sum);
-  }
+//     // Call the callback function with the result
+//     callback(sum);
+//   }
   
-  // Example callback function that logs the result
-  function displayResult(result) {
-    console.log("The sum is: " + result);
-  }
+//   // Example callback function that logs the result
+//   function displayResult(result) {
+//     console.log("The sum is: " + result);
+//   }
   
-  // Test the function
-  sumNumbersUpTo(5, displayResult); // The sum is: 15
+//   // Test the function
+//   sumNumbersUpTo(5, displayResult); // The sum is: 15
   
   
