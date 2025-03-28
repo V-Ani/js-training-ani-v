@@ -4,12 +4,12 @@
 // function multiply(a, b) {
 //     return a * b;
 //   }
-//   // Writhe your code here
+//  
   
 //   function cube(n) {
 //     return n * n * n;
 //   }
-//   // Writhe your code here
+//
   
 //   function sayHello(name) {
 //     return "Hello, " + name + "!";
@@ -42,3 +42,15 @@ const greet = (name = "Guest") => {
 console.log(greet());       // Output: "Hello, Guest!"
 console.log(greet("Alice")); // Output: "Hello, Alice!"
 
+// Task 3. Calculate Percentage
+// Requirement:
+// Write an arrow function that takes two arguments:
+// total: the total value
+// percentage: the percentage to calculate
+// The function should return the calculated percentage of the total.
+
+const calculatePercentage = (total, percentage) => (total * percentage) / 100;
+
+const total = 200;
+const percentage = 15;
+console.log(calculatePercentage(total, percentage));  // Output: 30
