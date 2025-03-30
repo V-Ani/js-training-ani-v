@@ -77,28 +77,52 @@
 // For example, "test" should become "TeSt".
 // If the string length is outside the specified range, display an appropriate message.
 
-function alternateCase(str) {
-    // Check if the string length is between 10 and 20 characters
-    if (str.length < 10 || str.length > 20) {
-        return "The string length must be between 10 and 20 characters.";
-    }
+// function alternateCase(str) {
+//     // Check if the string length is between 10 and 20 characters
+//     if (str.length < 10 || str.length > 20) {
+//         return "The string length must be between 10 and 20 characters.";
+//     }
 
-    let result = '';
+//     let result = '';
 
-    // Iterate over the string and alternate between uppercase and lowercase
-    for (let i = 0; i < str.length; i++) {
-        if (i % 2 === 0) {
-            result += str[i].toUpperCase();
-        } else {
-            result += str[i].toLowerCase();
-        }
-    }
+//     // Iterate over the string and alternate between uppercase and lowercase
+//     for (let i = 0; i < str.length; i++) {
+//         if (i % 2 === 0) {
+//             result += str[i].toUpperCase();
+//         } else {
+//             result += str[i].toLowerCase();
+//         }
+//     }
 
-    return result;
-}
+//     return result;
+// }
 
-// Example usage:
-console.log(alternateCase("HelloWorld")); // Output: HeLlOwOrLd
-console.log(alternateCase("Short"));      // Output: The string length must be between 10 and 20 characters.
+// // Example usage:
+// console.log(alternateCase("HelloWorld")); // Output: HeLlOwOrLd
+// console.log(alternateCase("Short"));      // Output: The string length must be between 10 and 20 characters.
 
+// Task 5: Check Palindrome
+// Requirement: Write a function that receives a string and checks if the string is a palindrome
+// (i.e., the string is the same forwards and backwards).
+// The function should return true if the string is a palindrome and false otherwise.
+// Ignore spaces and punctuation.
+// Example:
+// Input: "racecar"
+// Output: true
+// Explanation: The string "racecar" is the same forwards and backwards, so the output is true.
 
+function isPalindrome(str) {
+    // Remove non-alphanumeric characters and convert to lowercase
+    const cleanedStr = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+  
+    // Check if the cleaned string is the same forwards and backwards
+    const reversedStr = cleanedStr.split('').reverse().join('');
+    
+    return cleanedStr === reversedStr;
+  }
+  
+  // Example usage:
+  console.log(isPalindrome("racecar")); // Output: true
+  console.log(isPalindrome("hello")); // Output: false
+  console.log(isPalindrome("A man, a plan, a canal, Panama")); // Output: true
+  
