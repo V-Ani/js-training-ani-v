@@ -111,18 +111,39 @@
 // Output: true
 // Explanation: The string "racecar" is the same forwards and backwards, so the output is true.
 
-function isPalindrome(str) {
-    // Remove non-alphanumeric characters and convert to lowercase
-    const cleanedStr = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+// function isPalindrome(str) {
+//     // Remove non-alphanumeric characters and convert to lowercase
+//     const cleanedStr = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
   
-    // Check if the cleaned string is the same forwards and backwards
-    const reversedStr = cleanedStr.split('').reverse().join('');
+//     // Check if the cleaned string is the same forwards and backwards
+//     const reversedStr = cleanedStr.split('').reverse().join('');
     
-    return cleanedStr === reversedStr;
+//     return cleanedStr === reversedStr;
+//   }
+  
+//   // Example usage:
+//   console.log(isPalindrome("racecar")); // Output: true
+//   console.log(isPalindrome("hello")); // Output: false
+//   console.log(isPalindrome("A man, a plan, a canal, Panama")); // Output: true
+  
+// Task 6: Count Specific Character in String
+// Requirement: Write a function that receives two values: a main string and a character.
+// The function should return how many times the specified character appears in the string.
+
+function countCharacter(mainString, char) {
+    let count = 0;
+  
+    // Loop through the string and count occurrences of the specified character
+    for (let i = 0; i < mainString.length; i++) {
+      if (mainString[i] === char) {
+        count++;
+      }
+    }
+  
+    return count;
   }
   
-  // Example usage:
-  console.log(isPalindrome("racecar")); // Output: true
-  console.log(isPalindrome("hello")); // Output: false
-  console.log(isPalindrome("A man, a plan, a canal, Panama")); // Output: true
+  // Example usage
+  const result = countCharacter("hello world", "l");
+  console.log(result); // Output: 3
   
