@@ -37,15 +37,41 @@
 // If n is greater than the string length, return the full string.
 // Use slice() to extract the portion.
 
-function getLastNCharacters(text, n) {
-    // If n is greater than the string length, return the full string
-    if (n >= text.length) {
-        return text;
-    }
-    // Use slice to get the last n characters
-    return text.slice(-n);
-}
+// function getLastNCharacters(text, n) {
+//     // If n is greater than the string length, return the full string
+//     if (n >= text.length) {
+//         return text;
+//     }
+//     // Use slice to get the last n characters
+//     return text.slice(-n);
+// }
 
-// Example usage:
-console.log(getLastNCharacters("Hello, World!", 6));  // Output: "World!"
-console.log(getLastNCharacters("Hi", 5));           // Output: "Hi"
+// // Example usage:
+// console.log(getLastNCharacters("Hello, World!", 6));  // Output: "World!"
+// console.log(getLastNCharacters("Hi", 5));           // Output: "Hi"
+
+// Task 3: Extract the Middle Part of a String (Using substring)
+// Write a function extractMiddle(text) that returns the middle portion of a string.
+// If the string length is even, return the middle two characters.
+// If the string length is odd, return only the middle character.
+// Requirements:
+// Use substring() to extract the middle part of the string.
+// The function should handle both even and odd lengths.
+
+function extractMiddle(text) {
+    const length = text.length;
+    const middle = Math.floor(length / 2);
+  
+    if (length % 2 === 0) {
+      // Even length: return the middle two characters
+      return text.substring(middle - 1, middle + 1);
+    } else {
+      // Odd length: return the middle character
+      return text.substring(middle, middle + 1);
+    }
+  }
+  
+  // Example usage:
+  console.log(extractMiddle("hello")); // "l"
+  console.log(extractMiddle("abcdef")); // "cd"
+  
