@@ -102,24 +102,67 @@
 // console.log(getTotalEarnings()); // Expected output: 425
 
 // Store earnings array to track sales
-let earnings = [];
+// let earnings = [];
 
-// Function to record a sale
-function recordSale(amount) {
-    earnings.push(amount);
+// // Function to record a sale
+// function recordSale(amount) {
+//     earnings.push(amount);
+// }
+
+// // Function to calculate total earnings
+// function getTotalEarnings() {
+//     // Use reduce to sum up the earnings
+//     return earnings.reduce((total, amount) => total + amount, 0);
+// }
+
+// // Record sales
+// recordSale(100);
+// recordSale(50);
+// recordSale(200);
+// recordSale(75);
+
+// // Get total earnings and print the result
+// console.log(getTotalEarnings()); // Expected output: 425
+
+// Task 4: Remove Duplicates from an Array
+
+// You should create a function `removeDuplicates(arr)` that accepts an array of numbers and removes all duplicate values, 
+// returning a new array with only the unique values.
+
+// Requirements:
+// 1. The function should accept an array of numbers as input.
+// 2. It should remove all duplicate numbers from the array.
+// 3. The function should return the new array containing only unique numbers.
+// 4. You are only allowed to use simple for loops and basic array methods such as:
+//    `push()`, `pop()`, `shift()`, or `unshift()` to solve this. You **cannot use methods like `sort()`, `filter()`, or `Set()`**.
+
+// Example Call:
+// console.log(removeDuplicates([11, 11, 2, 3, 4, 4, 55, 6, 2, 1]));
+// // Expected output: [11, 2, 3, 4, 55, 6, 1]    
+
+function removeDuplicates(arr) {
+    let uniqueArr = [];
+    
+    // Loop through each element of the input array
+    for (let i = 0; i < arr.length; i++) {
+        // Check if the element is already in the uniqueArr
+        let isDuplicate = false;
+        for (let j = 0; j < uniqueArr.length; j++) {
+            if (arr[i] === uniqueArr[j]) {
+                isDuplicate = true;
+                break;
+            }
+        }
+        
+        // If not a duplicate, add it to the uniqueArr
+        if (!isDuplicate) {
+            uniqueArr.push(arr[i]);
+        }
+    }
+
+    return uniqueArr;
 }
 
-// Function to calculate total earnings
-function getTotalEarnings() {
-    // Use reduce to sum up the earnings
-    return earnings.reduce((total, amount) => total + amount, 0);
-}
-
-// Record sales
-recordSale(100);
-recordSale(50);
-recordSale(200);
-recordSale(75);
-
-// Get total earnings and print the result
-console.log(getTotalEarnings()); // Expected output: 425
+// Example usage
+console.log(removeDuplicates([11, 11, 2, 3, 4, 4, 55, 6, 2, 1]));
+// Expected output: [11, 2, 3, 4, 55, 6, 1]
