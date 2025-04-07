@@ -124,6 +124,7 @@
 // // Get total earnings and print the result
 // console.log(getTotalEarnings()); // Expected output: 425
 
+
 // Task 4: Remove Duplicates from an Array
 
 // You should create a function `removeDuplicates(arr)` that accepts an array of numbers and removes all duplicate values, 
