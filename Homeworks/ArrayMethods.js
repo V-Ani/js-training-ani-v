@@ -63,23 +63,48 @@
 // // Expected output: ["h", "e", "l", "l", "o", "w", "o", "r", "l", "d"]
 
 // Function to collect characters from a string, excluding spaces
-function collectCharacters(str) {
-    // Initialize an empty array to store characters
-    const characters = [];
+// function collectCharacters(str) {
+//     // Initialize an empty array to store characters
+//     const characters = [];
   
-    // Loop through each character in the string
-    for (let i = 0; i < str.length; i++) {
-      // If the character is not a space, add it to the array
-      if (str[i] !== ' ') {
-        characters.push(str[i]);
-      }
-    }
+//     // Loop through each character in the string
+//     for (let i = 0; i < str.length; i++) {
+//       // If the character is not a space, add it to the array
+//       if (str[i] !== ' ') {
+//         characters.push(str[i]);
+//       }
+//     }
   
-    // Return the final array of characters
-    return characters;
-  }
+//     // Return the final array of characters
+//     return characters;
+//   }
   
-  // Example usage
-  console.log(collectCharacters("hello world"));
-  // Expected output: ["h", "e", "l", "l", "o", "w", "o", "r", "l", "d"]
+//   // Example usage
+//   console.log(collectCharacters("hello world"));
+//   // Expected output: ["h", "e", "l", "l", "o", "w", "o", "r", "l", "d"]
   
+
+
+
+// Store earnings array to track sales
+let earnings = [];
+
+// Function to record a sale
+function recordSale(amount) {
+    earnings.push(amount);
+}
+
+// Function to calculate total earnings
+function getTotalEarnings() {
+    // Use reduce to sum up the earnings
+    return earnings.reduce((total, amount) => total + amount, 0);
+}
+
+// Record sales
+recordSale(100);
+recordSale(50);
+recordSale(200);
+recordSale(75);
+
+// Get total earnings and print the result
+console.log(getTotalEarnings()); // Expected output: 425
