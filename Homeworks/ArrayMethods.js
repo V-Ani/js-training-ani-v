@@ -83,8 +83,23 @@
 //   console.log(collectCharacters("hello world"));
 //   // Expected output: ["h", "e", "l", "l", "o", "w", "o", "r", "l", "d"]
   
+// Task 3: Store Earnings Tracker
 
+// You should create a function `recordSale(amount)` to track store earnings and another function `getTotalEarnings()` to calculate total earnings.
 
+// Requirements:
+// 1. Create an array called `earnings` to store sale amounts.
+// 2. Implement the function `recordSale(amount)`, which records a sale amount.
+// 3. Implement the function `getTotalEarnings()`, which calculates and returns the total earnings.
+// 4. Use `recordSale()` to add the following sales: `100`, `50`, `200`, `75`.
+// 5. Call `getTotalEarnings()` and print the total earnings.
+
+// Example Call:
+// recordSale(100);
+// recordSale(50);
+// recordSale(200);
+// recordSale(75);
+// console.log(getTotalEarnings()); // Expected output: 425
 
 // Store earnings array to track sales
 let earnings = [];
