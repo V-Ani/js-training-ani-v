@@ -18,3 +18,7 @@ function customForEach(array, callback) {
     console.log(`Index ${index}: ${value} (from [${arr}])`);
   });
   
+//   Index 0: apple (from [apple,banana,cherry])
+//   Index 1: banana (from [apple,banana,cherry])
+//   Index 2: cherry (from [apple,banana,cherry])
+  
