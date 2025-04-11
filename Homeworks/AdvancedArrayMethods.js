@@ -55,28 +55,67 @@
 
 // function customReverse(array)
 
-function customReverse(array) {
-    // Initialize two pointers: one at the start and one at the end of the array
-    let start = 0;
-    let end = array.length - 1;
+// function customReverse(array) {
+//     // Initialize two pointers: one at the start and one at the end of the array
+//     let start = 0;
+//     let end = array.length - 1;
 
-    // Loop until the two pointers meet in the middle
-    while (start < end) {
-        // Swap the elements at start and end
-        let temp = array[start];
-        array[start] = array[end];
-        array[end] = temp;
+//     // Loop until the two pointers meet in the middle
+//     while (start < end) {
+//         // Swap the elements at start and end
+//         let temp = array[start];
+//         array[start] = array[end];
+//         array[end] = temp;
 
-        // Move the pointers towards the center
-        start++;
-        end--;
+//         // Move the pointers towards the center
+//         start++;
+//         end--;
+//     }
+
+//     // Return the reversed array
+//     return array;
+// }
+
+// let arr = [1, 2, 3, 4, 5];
+// let reversedArr = customReverse(arr);
+
+// console.log(reversedArr);  // Output: [5, 4, 3, 2, 1]
+
+// Task 4: Implement Bubble Sort
+// Description:
+// Write a function that sorts an array of numbers using the bubble sort algorithm.
+// Requirements:
+// Do not use .sort().
+// Implement the bubble sort algorithm using loops.
+// Return the sorted array.
+
+// function bubbleSort(array)
+
+// Bubble Sort function
+function bubbleSort(array) {
+    let n = array.length;
+    
+    // Outer loop to go through all elements
+    for (let i = 0; i < n - 1; i++) {
+        // Inner loop to compare adjacent elements
+        for (let j = 0; j < n - i - 1; j++) {
+            // If the current element is greater than the next element, swap them
+            if (array[j] > array[j + 1]) {
+                let temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
+        }
     }
-
-    // Return the reversed array
     return array;
 }
 
-let arr = [1, 2, 3, 4, 5];
-let reversedArr = customReverse(arr);
+// Example usage
+const unsortedArray = [64, 34, 25, 12, 22, 11, 90];
+const sortedArray = bubbleSort(unsortedArray);
 
-console.log(reversedArr);  // Output: [5, 4, 3, 2, 1]
+console.log("Sorted Array: ", sortedArray);
+
+// Example Output:
+// For the input array [64, 34, 25, 12, 22, 11, 90], the output will be:
+// Sorted Array:  [11, 12, 22, 25, 34, 64, 90]
