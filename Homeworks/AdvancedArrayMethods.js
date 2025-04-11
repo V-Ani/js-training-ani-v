@@ -92,30 +92,94 @@
 // function bubbleSort(array)
 
 // Bubble Sort function
-function bubbleSort(array) {
-    let n = array.length;
+// function bubbleSort(array) {
+//     let n = array.length;
     
-    // Outer loop to go through all elements
-    for (let i = 0; i < n - 1; i++) {
-        // Inner loop to compare adjacent elements
-        for (let j = 0; j < n - i - 1; j++) {
-            // If the current element is greater than the next element, swap them
-            if (array[j] > array[j + 1]) {
-                let temp = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = temp;
-            }
-        }
-    }
-    return array;
-}
+//     // Outer loop to go through all elements
+//     for (let i = 0; i < n - 1; i++) {
+//         // Inner loop to compare adjacent elements
+//         for (let j = 0; j < n - i - 1; j++) {
+//             // If the current element is greater than the next element, swap them
+//             if (array[j] > array[j + 1]) {
+//                 let temp = array[j];
+//                 array[j] = array[j + 1];
+//                 array[j + 1] = temp;
+//             }
+//         }
+//     }
+//     return array;
+// }
 
-// Example usage
-const unsortedArray = [64, 34, 25, 12, 22, 11, 90];
-const sortedArray = bubbleSort(unsortedArray);
+// // Example usage
+// const unsortedArray = [64, 34, 25, 12, 22, 11, 90];
+// const sortedArray = bubbleSort(unsortedArray);
 
-console.log("Sorted Array: ", sortedArray);
+// console.log("Sorted Array: ", sortedArray);
 
 // Example Output:
 // For the input array [64, 34, 25, 12, 22, 11, 90], the output will be:
 // Sorted Array:  [11, 12, 22, 25, 34, 64, 90]
+
+// Task 5: Implement customReduce
+// Description:
+// Create a function customReduce that takes an array, a callback function, and an optional initial value.
+// It should apply the callback to accumulate a single result from the array elements — just like the built-in reduce() method.
+//
+// Requirements:
+// - If an initialValue is provided, use it as the starting accumulator and begin iteration from index 0.
+// - If no initialValue is provided, use the first element of the array as the accumulator and start from index 1.
+// - The callback should receive 4 arguments: accumulator, currentValue, index, and array.
+// - Return the final accumulated value.
+// - Do not use the built-in .reduce() method.
+// - If the array is empty and no initialValue is provided, return undefined.
+
+// function customReduce(array, callback, initialValue)
+
+function customReduce(array, callback, initialValue) {
+    // If the array is empty and no initial value is provided, return undefined
+    if (array.length === 0 && initialValue === undefined) {
+        return undefined;
+    }
+
+    let accumulator;
+    let startIndex;
+
+    // If an initial value is provided, use it as the starting accumulator
+    if (initialValue !== undefined) {
+        accumulator = initialValue;
+        startIndex = 0;
+    } else {
+        // Otherwise, use the first element of the array as the starting accumulator
+        accumulator = array[0];
+        startIndex = 1;
+    }
+
+    // Iterate over the array and apply the callback function
+    for (let i = startIndex; i < array.length; i++) {
+        accumulator = callback(accumulator, array[i], i, array);
+    }
+
+    // Return the final accumulated value
+    return accumulator;
+}
+
+// Example Usage
+
+const numbers = [1, 2, 3, 4, 5];
+
+// Example 1: Using an initial value
+const sumWithInitialValue = customReduce(numbers, (acc, current) => acc + current, 0);
+console.log(sumWithInitialValue);  // Output: 15 (1 + 2 + 3 + 4 + 5)
+
+// Example 2: Without an initial value
+const sumWithoutInitialValue = customReduce(numbers, (acc, current) => acc + current);
+console.log(sumWithoutInitialValue);  // Output: 15 (1 + 2 + 3 + 4 + 5)
+
+// Example 3: Using an initial value with strings
+const concatenatedString = customReduce(['a', 'b', 'c'], (acc, current) => acc + current, '');
+console.log(concatenatedString);  // Output: "abc"
+
+// Example 4: Empty array with no initial value (should return undefined)
+const emptyArrayResult = customReduce([], (acc, current) => acc + current);
+console.log(emptyArrayResult);  // Output: undefined
+
