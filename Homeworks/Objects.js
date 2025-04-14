@@ -8,18 +8,54 @@
 
 // function createUser(name, age, isAdmin)
 
-function createUser(name, age, isAdmin) {
-    return {
-      name: name,
-      age: age,
-      isAdmin: isAdmin
-    };
+// function createUser(name, age, isAdmin) {
+//     return {
+//       name: name,
+//       age: age,
+//       isAdmin: isAdmin
+//     };
+//   }
+  
+//   // Example usage:
+//   const user1 = createUser('Alice', 30, true);
+//   console.log(user1);
+  
+//   // Output:
+//   // { name: 'Alice', age: 30, isAdmin: true }
+  
+// Task 2: Calculate Total Sales
+// Description:
+// Write a function calculateTotalSales that takes a nested object representing products sold during the day.
+// Each product key contains an object with price and quantitySold.
+// The function should return the total revenue.
+// Requirements:
+// - Use a for...in loop to iterate over the object.
+// - Multiply price * quantitySold for each product and sum the results.
+
+// function calculateTotalSales(salesData)
+
+function calculateTotalSales(salesData) {
+    let total = 0;
+  
+    for (let product in salesData) {
+      const item = salesData[product];
+      total += item.price * item.quantitySold;
+    }
+  
+    return total;
   }
   
   // Example usage:
-  const user1 = createUser('Alice', 30, true);
-  console.log(user1);
+  const todaySales = {
+    apple: { price: 1.5, quantitySold: 30 },   // 1.5 * 30 = 45
+    banana: { price: 1.0, quantitySold: 20 },  // 1.0 * 20 = 20
+    orange: { price: 2.0, quantitySold: 15 }   // 2.0 * 15 = 30
+  };
   
-  // Output:
-  // { name: 'Alice', age: 30, isAdmin: true }
+  const totalRevenue = calculateTotalSales(todaySales);
+  console.log("Total Revenue:", totalRevenue);
+  
+  // Correct Output:
+  // Total Revenue: 95
+  
   
