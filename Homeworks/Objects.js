@@ -97,28 +97,56 @@
 
 // function getStringKeys(obj)  
 
-function getStringKeys(obj) {
-    const result = [];
-    for (const key of Object.keys(obj)) {
-      if (typeof obj[key] === 'string') {
-        result.push(key);
-      }
-    }
-    return result;
-  }
+// function getStringKeys(obj) {
+//     const result = [];
+//     for (const key of Object.keys(obj)) {
+//       if (typeof obj[key] === 'string') {
+//         result.push(key);
+//       }
+//     }
+//     return result;
+//   }
 
-  const sampleObj = {
-    name: "Alice",
-    age: 30,
-    city: "New York",
-    isActive: true,
-    hobby: "painting",
-    score: null
-  };
+//   const sampleObj = {
+//     name: "Alice",
+//     age: 30,
+//     city: "New York",
+//     isActive: true,
+//     hobby: "painting",
+//     score: null
+//   };
   
-  const stringKeys = getStringKeys(sampleObj);
-  console.log(stringKeys);
+//   const stringKeys = getStringKeys(sampleObj);
+//   console.log(stringKeys);
 
 //   ["name", "city", "hobby"]
+
+// Task 5: Merge Two Objects
+// Description:
+// Write a function mergeObjects that takes two objects and returns a new object that combines the properties of both.
+// If the same key exists in both, the value from the second object should overwrite the first.
+// Requirements:
+// - Do not modify the original objects.
+
+// function mergeObjects(obj1, obj2)
+
+function mergeObjects(obj1, obj2) {
+    // Use the spread operator to combine both objects
+    return { ...obj1, ...obj2 };
+  }
+
+  const objectA = { a: 1, b: 2, c: 3 };
+const objectB = { b: 20, d: 4 };
+
+const merged = mergeObjects(objectA, objectB);
+
+console.log("Merged Object:", merged);
+console.log("Original Object A:", objectA);
+console.log("Original Object B:", objectB);
+
+// Merged Object: { a: 1, b: 20, c: 3, d: 4 }
+// Original Object A: { a: 1, b: 2, c: 3 }
+// Original Object B: { b: 20, d: 4 }
+
 
   
