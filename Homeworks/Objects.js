@@ -68,18 +68,18 @@
 
 // function arrayToObject(arr)
 
-function arrayToObject(arr) {
-    const result = {};
-    for (let i = 0; i < arr.length; i++) {
-      result[i] = arr[i];
-    }
-    return result;
-  }
+// function arrayToObject(arr) {
+//     const result = {};
+//     for (let i = 0; i < arr.length; i++) {
+//       result[i] = arr[i];
+//     }
+//     return result;
+//   }
 
-const myArray = ['apple', 'banana', 'cherry'];
-const myObject = arrayToObject(myArray);
+// const myArray = ['apple', 'banana', 'cherry'];
+// const myObject = arrayToObject(myArray);
 
-console.log(myObject);
+// console.log(myObject);
 
 // {
 //     0: 'apple',
@@ -87,5 +87,38 @@ console.log(myObject);
 //     2: 'cherry'
 //   }
   
+// Task 4: Get Keys with String Values Only
+// Description:
+// Create a function getStringKeys that takes an object and returns an array of keys
+// whose values are strings.
+// Requirements:
+// - Use a loop or Object.keys() to iterate through the object.
+// - Return only the keys where the value is of type 'string'.
+
+// function getStringKeys(obj)  
+
+function getStringKeys(obj) {
+    const result = [];
+    for (const key of Object.keys(obj)) {
+      if (typeof obj[key] === 'string') {
+        result.push(key);
+      }
+    }
+    return result;
+  }
+
+  const sampleObj = {
+    name: "Alice",
+    age: 30,
+    city: "New York",
+    isActive: true,
+    hobby: "painting",
+    score: null
+  };
   
+  const stringKeys = getStringKeys(sampleObj);
+  console.log(stringKeys);
+
+//   ["name", "city", "hobby"]
+
   
