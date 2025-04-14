@@ -32,30 +32,60 @@
 // - Use a for...in loop to iterate over the object.
 // - Multiply price * quantitySold for each product and sum the results.
 
-// function calculateTotalSales(salesData)
+// function calculateTotalSales(salesData) 
 
-function calculateTotalSales(salesData) {
-    let total = 0;
+// function calculateTotalSales(salesData) {
+//     let total = 0;
   
-    for (let product in salesData) {
-      const item = salesData[product];
-      total += item.price * item.quantitySold;
-    }
+//     for (let product in salesData) {
+//       const item = salesData[product];
+//       total += item.price * item.quantitySold;
+//     }
   
-    return total;
-  }
+//     return total;
+//   }
   
-  // Example usage:
-  const todaySales = {
-    apple: { price: 1.5, quantitySold: 30 },   // 1.5 * 30 = 45
-    banana: { price: 1.0, quantitySold: 20 },  // 1.0 * 20 = 20
-    orange: { price: 2.0, quantitySold: 15 }   // 2.0 * 15 = 30
-  };
+//   // Example usage:
+//   const todaySales = {
+//     apple: { price: 1.5, quantitySold: 30 },   // 1.5 * 30 = 45
+//     banana: { price: 1.0, quantitySold: 20 },  // 1.0 * 20 = 20
+//     orange: { price: 2.0, quantitySold: 15 }   // 2.0 * 15 = 30
+//   };
   
-  const totalRevenue = calculateTotalSales(todaySales);
-  console.log("Total Revenue:", totalRevenue);
+//   const totalRevenue = calculateTotalSales(todaySales);
+//   console.log("Total Revenue:", totalRevenue);
   
   // Correct Output:
   // Total Revenue: 95
+
+//   Task 3: Convert Array to Object
+// Description:
+// Create a function arrayToObject that takes an array and returns an object.
+// The object should have the array indexes as keys and the elements as values.
+// Requirements:
+// - Use a loop to build the object manually (no Object.fromEntries).
+// - Return the constructed object.
+
+// function arrayToObject(arr)
+
+function arrayToObject(arr) {
+    const result = {};
+    for (let i = 0; i < arr.length; i++) {
+      result[i] = arr[i];
+    }
+    return result;
+  }
+
+const myArray = ['apple', 'banana', 'cherry'];
+const myObject = arrayToObject(myArray);
+
+console.log(myObject);
+
+// {
+//     0: 'apple',
+//     1: 'banana',
+//     2: 'cherry'
+//   }
+  
   
   
