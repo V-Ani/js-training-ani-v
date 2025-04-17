@@ -121,49 +121,124 @@ Requirements:
 */
 
 // Step 1: Create a class called Task
-class Task {
-    constructor(title, description) {
-      this.title = title;
-      this.description = description;
+// class Task {
+//     constructor(title, description) {
+//       this.title = title;
+//       this.description = description;
   
-      // Step 2: Create unique Symbols for taskID and status
-      this[Symbol.for('taskID')] = Math.floor(Math.random() * 1000); // random taskID
-      this[Symbol.for('status')] = 'Not Started'; // default status
-    }
+//       // Step 2: Create unique Symbols for taskID and status
+//       this[Symbol.for('taskID')] = Math.floor(Math.random() * 1000); // random taskID
+//       this[Symbol.for('status')] = 'Not Started'; // default status
+//     }
   
-    // Step 3: Method to update the status
-    updateStatus(newStatus) {
-      // Use the globally unique Symbol for status
-      this[Symbol.for('status')] = newStatus;
-    }
+//     // Step 3: Method to update the status
+//     updateStatus(newStatus) {
+//       // Use the globally unique Symbol for status
+//       this[Symbol.for('status')] = newStatus;
+//     }
     
-    // Method to get status, as Symbols are not directly accessible
-    getStatus() {
-      return this[Symbol.for('status')];
-    }
+//     // Method to get status, as Symbols are not directly accessible
+//     getStatus() {
+//       return this[Symbol.for('status')];
+//     }
   
-    // Method to get taskID (Symbol)
-    getTaskID() {
-      return this[Symbol.for('taskID')];
+//     // Method to get taskID (Symbol)
+//     getTaskID() {
+//       return this[Symbol.for('taskID')];
+//     }
+//   }
+  
+//   // Step 4: Create a new Task object, set the status, and print the taskID and status
+//   const task1 = new Task('Finish Assignment', 'Complete the math assignment by Friday');
+  
+//   // Update status using the updateStatus method
+//   task1.updateStatus('In Progress');
+  
+//   // Accessing the symbols properly using Symbol.for for consistent symbol references
+//   const taskID = task1.getTaskID();
+//   const status = task1.getStatus();
+  
+//   // Step 5: Log the task properties (taskID and status)
+//   console.log(`Task ID: ${taskID}`);
+//   console.log(`Status: ${status}`);
+  
+//   // Check to confirm uniqueness of Symbols
+//   console.log('Symbols are unique:', Symbol.for('status') !== Symbol.for('taskID'));
+  
+  
+  // Task 4: Optional Chaining with Deeply Nested Objects
+/*
+Create an object representing a company and use optional chaining to safely access deeply nested properties.
+
+Requirements:
+1. Create a `company` object with the following structure:
+   {
+     name: "TechCorp",
+     department: {
+       hr: {
+         manager: {
+           name: "Alice",
+           office: {
+             floor: 5,
+             number: 101
+           }
+         }
+       },
+       engineering: {
+         manager: {
+           name: "Bob",
+           office: {
+             floor: 8,
+             number: 202
+           }
+         }
+       }
+     }
+   }
+2. Using optional chaining, access `company.department.hr.manager.office.floor` and print it to the console.
+3. Also, access `company.department.sales.manager.name` (which does not exist) using optional chaining and print the result.
+4. Print a message if `hr.manager` or `sales.manager` is undefined using optional chaining.
+*/ 
+
+// Create the company object
+const company = {
+    name: "TechCorp",
+    department: {
+      hr: {
+        manager: {
+          name: "Alice",
+          office: {
+            floor: 5,
+            number: 101
+          }
+        }
+      },
+      engineering: {
+        manager: {
+          name: "Bob",
+          office: {
+            floor: 8,
+            number: 202
+          }
+        }
+      }
     }
+  };
+  
+  // 1. Access and print company.department.hr.manager.office.floor using optional chaining
+  const hrOfficeFloor = company.department?.hr?.manager?.office?.floor;
+  console.log("HR Office Floor:", hrOfficeFloor); // Output: 5
+  
+  // 2. Access and print company.department.sales.manager.name (which doesn't exist) using optional chaining
+  const salesManagerName = company.department?.sales?.manager?.name;
+  console.log("Sales Manager Name:", salesManagerName); // Output: undefined
+  
+  // 3. Print a message if hr.manager or sales.manager is undefined using optional chaining
+  if (!company.department?.hr?.manager) {
+    console.log("HR Manager is not available.");
   }
   
-  // Step 4: Create a new Task object, set the status, and print the taskID and status
-  const task1 = new Task('Finish Assignment', 'Complete the math assignment by Friday');
-  
-  // Update status using the updateStatus method
-  task1.updateStatus('In Progress');
-  
-  // Accessing the symbols properly using Symbol.for for consistent symbol references
-  const taskID = task1.getTaskID();
-  const status = task1.getStatus();
-  
-  // Step 5: Log the task properties (taskID and status)
-  console.log(`Task ID: ${taskID}`);
-  console.log(`Status: ${status}`);
-  
-  // Check to confirm uniqueness of Symbols
-  console.log('Symbols are unique:', Symbol.for('status') !== Symbol.for('taskID'));
-  
-  
+  if (!company.department?.sales?.manager) {
+    console.log("Sales Manager is not available.");
+  }
   
