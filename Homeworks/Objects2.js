@@ -45,7 +45,7 @@ const ShoppingCartManager = {
     }
   };
   
-  // ✅ Usage Example
+  // Usage Example
   console.log("Initial Cart:", ShoppingCartManager.getCart());
   ShoppingCartManager.addItem("Butter");
   ShoppingCartManager.addItem("Cheese");
