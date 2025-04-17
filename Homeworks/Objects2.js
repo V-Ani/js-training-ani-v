@@ -241,4 +241,9 @@ const company = {
   if (!company.department?.sales?.manager) {
     console.log("Sales Manager is not available.");
   }
+
+//   HR Office Floor: 5
+// Sales Manager Name: undefined
+// Sales Manager is not available.
+
   
