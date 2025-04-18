@@ -201,49 +201,99 @@ Requirements:
 */ 
 
 // Create the company object
-const company = {
-    name: "TechCorp",
-    department: {
-      hr: {
-        manager: {
-          name: "Alice",
-          office: {
-            floor: 5,
-            number: 101
-          }
-        }
-      },
-      engineering: {
-        manager: {
-          name: "Bob",
-          office: {
-            floor: 8,
-            number: 202
-          }
-        }
-      }
-    }
-  };
+// const company = {
+//     name: "TechCorp",
+//     department: {
+//       hr: {
+//         manager: {
+//           name: "Alice",
+//           office: {
+//             floor: 5,
+//             number: 101
+//           }
+//         }
+//       },
+//       engineering: {
+//         manager: {
+//           name: "Bob",
+//           office: {
+//             floor: 8,
+//             number: 202
+//           }
+//         }
+//       }
+//     }
+//   };
   
-  // 1. Access and print company.department.hr.manager.office.floor using optional chaining
-  const hrOfficeFloor = company.department?.hr?.manager?.office?.floor;
-  console.log("HR Office Floor:", hrOfficeFloor); // Output: 5
+//   // 1. Access and print company.department.hr.manager.office.floor using optional chaining
+//   const hrOfficeFloor = company.department?.hr?.manager?.office?.floor;
+//   console.log("HR Office Floor:", hrOfficeFloor); // Output: 5
   
-  // 2. Access and print company.department.sales.manager.name (which doesn't exist) using optional chaining
-  const salesManagerName = company.department?.sales?.manager?.name;
-  console.log("Sales Manager Name:", salesManagerName); // Output: undefined
+//   // 2. Access and print company.department.sales.manager.name (which doesn't exist) using optional chaining
+//   const salesManagerName = company.department?.sales?.manager?.name;
+//   console.log("Sales Manager Name:", salesManagerName); // Output: undefined
   
-  // 3. Print a message if hr.manager or sales.manager is undefined using optional chaining
-  if (!company.department?.hr?.manager) {
-    console.log("HR Manager is not available.");
-  }
+//   // 3. Print a message if hr.manager or sales.manager is undefined using optional chaining
+//   if (!company.department?.hr?.manager) {
+//     console.log("HR Manager is not available.");
+//   }
   
-  if (!company.department?.sales?.manager) {
-    console.log("Sales Manager is not available.");
-  }
+//   if (!company.department?.sales?.manager) {
+//     console.log("Sales Manager is not available.");
+//   }
 
 //   HR Office Floor: 5
 // Sales Manager Name: undefined
 // Sales Manager is not available.
 
+// Task 5: Constructor Function for Calculator with Objects
+/*
+Create a `Calculator` constructor function to perform basic arithmetic operations on object properties.
+
+Requirements:
+1. Create a constructor function `Calculator` that accepts two parameters: `num1` and `num2`.
+2. Inside the constructor, assign `num1` and `num2` to `this.num1` and `this.num2`.
+3. Add methods `add()`, `subtract()`, `multiply()`, and `divide()` to perform the respective operations using `this.num1` and `this.num2`.
+4. Create a new `Calculator` object and perform calculations by calling these methods.
+5. Print the results of each operation.
+*/
+
+// Constructor function for Calculator
+function Calculator(num1, num2) {
+    this.num1 = num1;
+    this.num2 = num2;
   
+    this.add = function () {
+      return this.num1 + this.num2;
+    };
+  
+    this.subtract = function () {
+      return this.num1 - this.num2;
+    };
+  
+    this.multiply = function () {
+      return this.num1 * this.num2;
+    };
+  
+    this.divide = function () {
+      if (this.num2 === 0) {
+        return "Error: Division by zero";
+      }
+      return this.num1 / this.num2;
+    };
+  }
+  
+  // Create a new Calculator object
+  const calc = new Calculator(10, 5);
+  
+  // Perform calculations and print the results
+  console.log("Addition:", calc.add());
+  console.log("Subtraction:", calc.subtract());
+  console.log("Multiplication:", calc.multiply());
+  console.log("Division:", calc.divide());
+  
+// Expected Output
+// Addition: 15
+// Subtraction: 5
+// Multiplication: 50
+// Division: 2
