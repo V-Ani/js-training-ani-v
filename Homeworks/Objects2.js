@@ -259,41 +259,66 @@ Requirements:
 */
 
 // Constructor function for Calculator
-function Calculator(num1, num2) {
-    this.num1 = num1;
-    this.num2 = num2;
+// function Calculator(num1, num2) {
+//     this.num1 = num1;
+//     this.num2 = num2;
   
-    this.add = function () {
-      return this.num1 + this.num2;
-    };
+//     this.add = function () {
+//       return this.num1 + this.num2;
+//     };
   
-    this.subtract = function () {
-      return this.num1 - this.num2;
-    };
+//     this.subtract = function () {
+//       return this.num1 - this.num2;
+//     };
   
-    this.multiply = function () {
-      return this.num1 * this.num2;
-    };
+//     this.multiply = function () {
+//       return this.num1 * this.num2;
+//     };
   
-    this.divide = function () {
-      if (this.num2 === 0) {
-        return "Error: Division by zero";
-      }
-      return this.num1 / this.num2;
-    };
-  }
+//     this.divide = function () {
+//       if (this.num2 === 0) {
+//         return "Error: Division by zero";
+//       }
+//       return this.num1 / this.num2;
+//     };
+//   }
   
-  // Create a new Calculator object
-  const calc = new Calculator(10, 5);
+//   // Create a new Calculator object
+//   const calc = new Calculator(10, 5);
   
-  // Perform calculations and print the results
-  console.log("Addition:", calc.add());
-  console.log("Subtraction:", calc.subtract());
-  console.log("Multiplication:", calc.multiply());
-  console.log("Division:", calc.divide());
+//   // Perform calculations and print the results
+//   console.log("Addition:", calc.add());
+//   console.log("Subtraction:", calc.subtract());
+//   console.log("Multiplication:", calc.multiply());
+//   console.log("Division:", calc.divide());
   
 // Expected Output
 // Addition: 15
 // Subtraction: 5
 // Multiplication: 50
-// Division: 2
+// Division: 2 
+
+// Task 6: Using Nullish Coalescing (??) with Objects
+/*
+Create a function `getUserInfo()` that returns the user's name or a default message if the name is undefined or null.
+
+Requirements:
+1. Create an object `user` with a `name` property, which could be undefined or null.
+2. Use nullish coalescing (`??`) to return the `name` property if it exists, or `"Anonymous"` if the `name` is undefined or null.
+3. Call `getUserInfo()` with a `user` object where the `name` is `null` and another where the `name` is a string.
+4. Print the results to demonstrate how nullish coalescing works.
+*/  
+
+// Function that uses nullish coalescing
+function getUserInfo(user) {
+    return user.name ?? "Anonymous";
+  }
+  
+  // Test case 1: user with name as null
+  const user1 = { name: null };
+  console.log(getUserInfo(user1)); // Output: Anonymous
+  
+  // Test case 2: user with name as a string
+  const user2 = { name: "Alice" };
+  console.log(getUserInfo(user2)); // Output: Alice
+  
